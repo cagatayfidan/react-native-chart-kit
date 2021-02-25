@@ -4,6 +4,7 @@ import { Defs, Line, LinearGradient, Stop, Text } from "react-native-svg";
 import { ChartConfig, Dataset, PartialBy } from "./HelperTypes";
 
 export interface AbstractChartProps {
+  fontSize?: number;
   fromZero?: boolean;
   fromNumber?: number;
   chartConfig?: AbstractChartConfig;
@@ -267,7 +268,7 @@ class AbstractChart<
       hidePointsAtIndex = []
     } = this.props;
 
-    const fontSize = 12;
+    const fontSize = 20;
 
     let fac = 1;
     if (stackedBar) {
